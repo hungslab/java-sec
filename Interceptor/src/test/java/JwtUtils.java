@@ -20,13 +20,8 @@ public class JwtUtils {
 
     @Test
     public void generateToken() {
-        long EXPIRATION_TIME = 86400000;
-        String token = Jwts.builder()
-                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .setSubject("admin")
-                .signWith(Keys.hmacShaKeyFor("E66559580A1ADF48CDD928516062F12E".getBytes(StandardCharsets.UTF_8)))
-                .compact();
 
-        System.out.println(token);
+
+
     }
 }

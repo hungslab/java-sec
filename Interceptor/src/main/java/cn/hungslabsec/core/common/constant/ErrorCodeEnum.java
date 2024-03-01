@@ -26,7 +26,7 @@ public enum ErrorCodeEnum {
     /**
      * 正确执行后的返回
      */
-    OK("200", "请求成功"),
+    OK("200", "success"),
 
     /**
      * 一级宏观错误码，用户端错误
@@ -126,7 +126,7 @@ public enum ErrorCodeEnum {
     /**
      * 一级宏观错误码，系统执行出错
      */
-    SYSTEM_ERROR("B0001", "系统执行出错"),
+    SYSTEM_ERROR("B0001", "对不起，操作失败，请联系管理员"),
 
     /**
      * 二级宏观错误码，系统执行超时

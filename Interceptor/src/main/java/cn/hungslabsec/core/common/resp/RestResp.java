@@ -25,7 +25,7 @@ public class RestResp<T> {
     /**
      * 响应消息
      */
-    private String message;
+    private String msg;
 
     /**
      * 响应数据
@@ -34,12 +34,12 @@ public class RestResp<T> {
 
     private RestResp() {
         this.code = ErrorCodeEnum.OK.getCode();
-        this.message = ErrorCodeEnum.OK.getMessage();
+        this.msg = ErrorCodeEnum.OK.getMessage();
     }
 
     private RestResp(ErrorCodeEnum errorCode) {
         this.code = errorCode.getCode();
-        this.message = errorCode.getMessage();
+        this.msg = errorCode.getMessage();
     }
 
     private RestResp(T data) {
