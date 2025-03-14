@@ -17,7 +17,7 @@ public class UnserializeTest {
     }
 
     public static void main (String[] args) throws Exception {
-        Persion persion = (Persion) unserialize("ser.bin");
-        System.out.println(persion);
+        Person person = (Person) unserialize("./ser.bin");
+        System.out.println(person);
     }
 }
