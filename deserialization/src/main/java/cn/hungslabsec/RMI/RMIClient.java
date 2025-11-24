@@ -2,9 +2,9 @@ package cn.hungslabsec.RMI;
 
 import java.rmi.Naming;
 
-import static cn.hungslabsec.RMI.RMIServerTest.RMI_NAME;
+import static cn.hungslabsec.RMI.RMIServer.RMI_NAME;
 
-public class RMIClientTest {
+public class RMIClient {
 
     public static void main(String[] args) {
         try {

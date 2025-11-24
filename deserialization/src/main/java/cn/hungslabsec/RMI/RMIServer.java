@@ -4,7 +4,7 @@ package cn.hungslabsec.RMI;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 
-public class RMIServerTest {
+public class RMIServer {
 
     // RMI服务器IP地址
     public static final String RMI_HOST = "127.0.0.1";

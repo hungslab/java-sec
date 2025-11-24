@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+<!ENTITY % remote SYSTEM "http://127.0.0.1:8000/xxe.dtd">
+%remote;]>

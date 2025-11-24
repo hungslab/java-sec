@@ -56,11 +56,10 @@ public class MyClassLoader extends ClassLoader
     }
 
     public static void test1() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
-        MyClassLoader classLoader = new MyClassLoader("E:\\Projects\\java\\java-sec\\deserialization\\src\\main\\java\\cn\\hungslabsec\\classloader\\");
+        MyClassLoader classLoader = new MyClassLoader("/Users/donk/Desktop/Projects/java/java-sec/deserialization/src/main/java/cn/hungslabsec/classloader");
         Class clazz = classLoader.loadClass("cn.hungslabsec.classloader.CalcTest");
         Object o = clazz.newInstance();
         Method m = clazz.getMethod("calc");
         System.out.println(m.invoke(o));
-
     }
 }

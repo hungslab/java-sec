@@ -10,6 +10,11 @@
 
     <modules>
         <module>deserialization</module>
-        <module>jackson</module>
+        <module>serialization</module>
+        <module>jndiattack</module>
+        <module>serialization/CommonsCollections</module>
+        <module>serialization/jdk7u21</module>
+        <module>common</module>
+        <module>serialization/c3p0</module>
     </modules>
 </project>

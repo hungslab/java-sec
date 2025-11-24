@@ -1,4 +1,4 @@
-package cn.hungslabsec.playloads;
+package playloads;
 
 import java.io.*;
 import java.lang.reflect.Field;
