@@ -16,5 +16,6 @@
         <module>serialization/jdk7u21</module>
         <module>common</module>
         <module>serialization/c3p0</module>
+        <module>serialization/springaop</module>
     </modules>
 </project>
